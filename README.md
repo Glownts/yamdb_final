@@ -1,4 +1,4 @@
-![Workflow badge] (https://github.com/Glownts/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
+![Workflow badge](https://github.com/Glownts/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
 
 
 ### Описание
