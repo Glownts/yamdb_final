@@ -16,7 +16,7 @@ if os.path.exists(dotenv_path):
 
 SECRET_KEY = os.getenv('SECRET_KEY', default='0e933ecb0a4isv6i3^8q3ydxe+gyys$ftds5ec6&&#vofzl&@y')
 
-# SECURITY WARNING: don't run with debug turned on in production!
+
 DEBUG = False
 
 ALLOWED_HOSTS = ['*']
