@@ -2,9 +2,9 @@
 Базовые модели.
 """
 
-from django.db import models
 from django.conf import settings
 from django.core.validators import validate_slug
+from django.db import models
 
 
 class GenreAndCategoryModel(models.Model):

@@ -3,18 +3,10 @@
 """
 
 from csv import DictReader
+
 from django.core.management import BaseCommand
-
-from reviews.models import (
-    Category,
-    Comment,
-    GenreTitle,
-    Genre,
-    Review,
-    Title,
-    User
-)
-
+from reviews.models import (Category, Comment, Genre, GenreTitle, Review,
+                            Title, User)
 
 ALREDY_LOADED_ERROR_MESSAGE = """
 If you need to reload data from the CSV file,

@@ -3,41 +3,27 @@
 '''
 
 from django.contrib.auth.tokens import default_token_generator
-from django.shortcuts import get_object_or_404
 from django.db.models import Avg
-
+from django.shortcuts import get_object_or_404
 from django_filters.rest_framework import DjangoFilterBackend
-
 from rest_framework import permissions, status, viewsets
 from rest_framework.decorators import action, api_view, permission_classes
 from rest_framework.filters import SearchFilter
 from rest_framework.pagination import PageNumberPagination
 from rest_framework.response import Response
-
 from rest_framework_simplejwt.tokens import RefreshToken
-
 from reviews.models import Category, Genre, Review, Title
 from users.models import User
 
-
 from .filters import TitleFilter
 from .mixins import ListCreateDestroyViewSet, NotPUTViewSet
-from .permissions import (
-    AdminOnly,
-    AdminOrReadOnly,
-    AuthorModeratorAdminOrReadOnly
-)
-from .serializers import (
-    CategorySerializer,
-    CommentSerializer,
-    GenreSerializer,
-    GetTokenSerializer,
-    ReviewSerializer,
-    UserCreationSerializer,
-    TitleCreateSerializer,
-    TitleSerializer,
-    UserSerializer
-)
+from .permissions import (AdminOnly, AdminOrReadOnly,
+                          AuthorModeratorAdminOrReadOnly)
+from .serializers import (CategorySerializer, CommentSerializer,
+                          GenreSerializer, GetTokenSerializer,
+                          ReviewSerializer, TitleCreateSerializer,
+                          TitleSerializer, UserCreationSerializer,
+                          UserSerializer)
 from .utils import mail_confirmation
 
 
@@ -212,6 +198,7 @@ class UserViewSet(NotPUTViewSet):
             return Response(
                 serializer.errors, status=status.HTTP_400_BAD_REQUEST
             )
+        return None
 
 
 @api_view(['POST'])
@@ -232,6 +219,7 @@ def signup(request):
             mail_confirmation(request, user)
             return Response(serializer.data, status=status.HTTP_200_OK)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    return None
 
 
 @api_view(['POST'])
@@ -254,3 +242,4 @@ def get_jwt_token(request):
                 status=status.HTTP_400_BAD_REQUEST
             )
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    return None

@@ -2,7 +2,6 @@
 Фильтры для вью-функций приложения api.
 """
 import django_filters
-
 from reviews.models import Title
 
 
