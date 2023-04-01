@@ -1,5 +1,8 @@
 ![Workflow badge](https://github.com/Glownts/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
 
+## Адрес сервера
+178.154.203.93
+
 
 ### Описание
 Проект YaMDb собирает отзывы (Review) пользователей на произведения (Title).
