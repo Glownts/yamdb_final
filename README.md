@@ -74,7 +74,7 @@ docker-compose exec web python manage.py createsuperuser
 
 ## Шаблон .env-файла
 
-SECRET_KEY='' # секртеный ключ
+SECRET_KEY='' # секретный ключ
 DB_ENGINE='' # указываем, с какой БД работаем
 DB_NAME='' # имя базы данных
 POSTGRES_USER='' # логин для подключения к базе данных
