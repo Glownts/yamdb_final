@@ -1,7 +1,7 @@
 ![Workflow badge](https://github.com/Glownts/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
 
 ## Адрес сервера
-178.154.203.93 ЗААМЕНИТЬ АЙПИ ТУТ И В ДЕФОЛТЕ!!!!
+158.160.62.199
 
 ### Описание
 Проект YaMDb собирает отзывы (Review) пользователей на произведения (Title).
