@@ -76,7 +76,7 @@ docker-compose exec web python manage.py createsuperuser
 
 SECRET_KEY='' # секретный ключ
 DB_ENGINE='' # тип БД
-DB_NAME='' # имя базы данных
+DB_NAME='' # имя БД
 POSTGRES_USER='' # логин для подключения к БД
 POSTGRES_PASSWORD='' # пароль для подключения к БД
 DB_HOST='' # название сервиса
