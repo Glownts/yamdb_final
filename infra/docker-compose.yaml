@@ -9,9 +9,7 @@ services:
       - ./.env
   
   web:
-    # FIX: Для отладки, чтобы сразу код свежий собирать.
-    # image: glownt/api_yamdb:latest
-    build: ../api_yamdb
+    image: glownt/api_yamdb:latest
     restart: always
     volumes:
       - static_value:/app/static/
